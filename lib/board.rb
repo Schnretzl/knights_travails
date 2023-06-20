@@ -5,5 +5,14 @@ class Board
     @grid = [width, height]
     @width = width
     @height = height
+    @visited = []
+  end
+
+  def visit(x, y)
+    @visited += [x, y]
+  end
+
+  def visited?(x, y)
+    include?([x, y])
   end
 end
